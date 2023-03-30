@@ -16,7 +16,9 @@ startButton.addEventListener('click', () => {
 	quizContainerElement.classList.remove('hide');
   	currentQuestionIndex = 0;
 	showQuestion(myQuestions[currentQuestionIndex]);
-  }
+
+	
+}
 
 function showQuestion(question) {
 console.log("Showing question:", question);
@@ -38,20 +40,21 @@ answerButtons.forEach(button => {
 	});
   });
 
-  function startTimer(){
-	var timer = 60;
-	setInterval(function() {
-	  timer--;
-	  if (timer >= 0) {
+  function startTimer() {
+	let timeLeft = 60;
+	const timer = setInterval(function() {
+	  timeLeft--;
+	  if (timeLeft >= 0) {
 		span = document.getElementById("time");
-		span.innerHTML = timer;
+		span.innerHTML = timeLeft;
 	  }
-	  if (timer === 0) {
-		  alert('GAME OVER');
-		  clearInterval(timer);
+	  if (timeLeft === 0) {
+		alert('GAME OVER');
+		clearInterval(timer);
 	  }
 	}, 1000);
   }
+  
 //starting game and calling timer function
   function startGameAndTimer() {
 
@@ -124,6 +127,9 @@ function endGame() {
 	startButton.classList.remove('hide');
 	score = 0;
 	currentQuestionIndex = 0;
+	
+	saveScore(score);
+
   }
   
 //function to check the answer and subtract time if wrong 
@@ -152,4 +158,3 @@ function checkAnswer(selectedButton) {
 	}
 		showQuestion(myQuestions[currentQuestionIndex]);
   };
-  
