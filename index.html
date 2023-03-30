@@ -5,36 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Fundamentals Game</title>
-    <link rel="stylesheet" href="./Assets/style.css">
 </head>
-
 <body>
-    <h1 class="top">
-        <div id="timer" class="timer">timer</div>
-        <div id="scores" class="hide">high scores</div>
-    </h1>
-    <div class="container">
-    <div id="question-container" class="answers">
-        <div id="question">Question</div>
-        <div id="answer-btns" class="btn-grid">
-            <button class="btn">answer 1</button>
-            <button class="btn">answer 2</button>
-            <button class="btn">answer 3</button>
-            <button class="btn">answer 4</button>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <div class ="container">
+        <div id="quiz-container" class="hide">
+            <div id="question">Question goes here</div>
+            <div id="answer-options" class="btn-grid">
+                <button class="btn" id="a">a</button>
+                <button class="btn" id="b">b</button>
+                <button class="btn" id="c">c</button>
+                <button class="btn" id="d">d</button>
         </div>
-        <div class="start">
-            <button id="start-btn" class="start-btn">Start</button>
-        </div>
-     </div>
-
-
-  
-
-
-
-
-
-
+    </div>
+        <span id="time" class="timer">60</span>
+        <button class="start" id="start-btn" >START</button>     
+    </div>    
  <script src="./Assets/script.js"> </script>   
 </body>
 </html>
