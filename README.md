@@ -11,6 +11,7 @@ A timed coding quiz with multiple-choice questions regarding JavaScript syntax.
 
 ## Live URL:
 
+ https://sanmcc.github.io/JavaScript-Knowledge-Test/ 
 
 ## Screenshot:
 ![Alt text](./Assets/screenshot%20ch4%201.JPG "Screenshot")

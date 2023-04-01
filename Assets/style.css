@@ -81,3 +81,8 @@ button.start:hover {
   #start-btn {
     display: block;
   }
+
+  #score-form {
+    display: none;
+  }
+  

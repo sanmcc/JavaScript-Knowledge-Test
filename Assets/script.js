@@ -3,6 +3,7 @@ const quizContainerElement = document.getElementById ('quiz-container');
 const questionElement = document.getElementById('question');
 const answerButtons = document.querySelectorAll('.btn');
 
+let timeLeft;
 
 // event listener to show quiz-container on start
 startButton.addEventListener('click', () => {
@@ -41,7 +42,7 @@ answerButtons.forEach(button => {
   });
 
   function startTimer() {
-	let timeLeft = 60;
+	timeLeft = 60;
 	const timer = setInterval(function() {
 	  timeLeft--;
 	  if (timeLeft >= 0) {
@@ -128,13 +129,12 @@ function endGame() {
 	score = 0;
 	currentQuestionIndex = 0;
 	
-	saveScore(score);
 
   }
   
 //function to check the answer and subtract time if wrong 
 function checkAnswer(selectedButton) {
-	console.log("Selected answer:", selectedButton.dataset.answer);
+	// console.log("Selected answer:", selectedButton.dataset.answer);
 	
 	let selectedButtonIndex = -1;
 	answerButtons.forEach((button, index) => {
@@ -156,5 +156,4 @@ function checkAnswer(selectedButton) {
 	  // end game if all questions answered
 	  endGame();
 	}
-		showQuestion(myQuestions[currentQuestionIndex]);
   };
